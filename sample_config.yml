@@ -3,3 +3,6 @@ READWISE_ACCESS_TOKEN: "XXX"
 
 # Pinboard API token, from https://pinboard.in/settings/password
 PINBOARD_API_TOKEN: "username:xxxxxxxx"
+
+# We save the latest timestamp fetched here
+STATE_FILE: "state.txt"

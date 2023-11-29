@@ -6,6 +6,8 @@ idna==3.6
 mypy-extensions==1.0.0
 packaging==23.2
 pathspec==0.11.2
+pinboard==2.1.9
 platformdirs==4.0.0
+PyYAML==6.0.1
 requests==2.31.0
 urllib3==2.1.0
