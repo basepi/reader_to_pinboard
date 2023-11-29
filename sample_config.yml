@@ -1,0 +1,5 @@
+# Get your token from https://readwise.io/access_token
+READWISE_ACCESS_TOKEN: "XXX"
+
+# Pinboard API token, from https://pinboard.in/settings/password
+PINBOARD_API_TOKEN: "username:xxxxxxxx"
