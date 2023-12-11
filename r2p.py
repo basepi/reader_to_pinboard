@@ -57,6 +57,9 @@ for article in articles:
     if article["source_url"].startswith("mailto:"):
         print(f"Skipping \"{article['title']}\" as it was an email newsletter.")
         continue
+    if "noarchive" in article["tags"]:
+        print(f"Skipping \"{article['title']}\" as it has the 'noarchive' tag..")
+        continue
     add_article_to_pinboard(article)
     count += 1
 print(f"Saved {count} articles to pinboard.")
