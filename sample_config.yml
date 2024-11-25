@@ -4,5 +4,8 @@ READWISE_ACCESS_TOKEN: "XXX"
 # Pinboard API token, from https://pinboard.in/settings/password
 PINBOARD_API_TOKEN: "username:xxxxxxxx"
 
+# Webhook to send the count of read articles for updating Beeminder
+BEEMINDER_WEBHOOK: "https://maker.ifttt.com/trigger/xxxxxxx/json/with/key/xxxxxxxx"
+
 # We save the latest timestamp fetched here
 STATE_FILE: "state.txt"
