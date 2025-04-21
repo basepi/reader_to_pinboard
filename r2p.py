@@ -55,7 +55,8 @@ def add_article_to_pinboard(article):
         print(f"Pinboard is unavailable or rate limiting. Exiting.")
         sys.exit(1)
 
-
+# Print timestamp
+print(datetime.datetime.now(datetime.UTC).isoformat())
 # Get all of a user's archived documents
 articles = fetch_reader_document_list_api(updated_after=updated_after, location="archive")
 print(f"Fetched {len(articles)} articles")
