@@ -2,7 +2,7 @@ import datetime
 import requests  # This may need to be installed from pip
 import yaml
 import pinboard
-from pinboard.exceptions import PinboardServiceUnavailable
+from pinboard.exceptions import PinboardServiceUnavailable, PinboardError
 import sys
 
 with open("config.yml", "r") as file:
@@ -54,6 +54,9 @@ def add_article_to_pinboard(article):
     except PinboardServiceUnavailable:
         print(f"Pinboard is unavailable or rate limiting. Exiting.")
         sys.exit(1)
+    except pinboard.exceptions.PinboardError as exc:
+        print(f"Pinboard had an error, skipping \"{article['title']}\": {exc}")
+        return
 
 # Print timestamp
 print(datetime.datetime.now(datetime.UTC).isoformat())
