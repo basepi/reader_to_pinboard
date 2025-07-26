@@ -44,6 +44,9 @@ def fetch_reader_document_list_api(updated_after=None, location=None):
 
 def add_article_to_pinboard(article):
     pb = pinboard.Pinboard(pinboard_token)
+    if not article["source_url"]:
+        print(f"Skipping \"{article['title']}\": No URL")
+        return
     try:
         pb.posts.add(
             url=article["source_url"],
